@@ -9,6 +9,15 @@ class Movie
     public $genre;
     public $vote;
     public $id;
+
+    // Class Constructor
+    function __construct($name, $genre, $vote, $id)
+    {
+        $this->name = $name;
+        $this->genre = $genre;
+        $this->vote = $vote;
+        $this->id = $id;
+    }
 }
 
 ?>
