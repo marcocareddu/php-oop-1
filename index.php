@@ -1,7 +1,7 @@
 <?php
 
-// Create class Movie
 
+// Create class Movie
 class Movie
 {
     // Class properties
@@ -69,13 +69,15 @@ $movies = [
 
             <h1>PHP Movie</h1>
             <div class="pt-3">
+
+                <!-- Display list items from array of objects -->
                 <?php foreach ($movies as $data) : ?>
 
-                    <h3><?= $data->name ?></h3>
-                    <ul>
-                        <li> <?= $data->name ?> </li>
-                        <li> <?= $data->genre ?> </li>
-                        <li> <?= $data->vote ?> </li>
+                    <h3 class="mt-4"><?= $data->name ?></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action"> <?= $data->name ?> </li>
+                        <li class="list-group-item list-group-item-action"> <?= $data->genre ?> </li>
+                        <li class="list-group-item list-group-item-action"> <?= $data->vote ?> </li>
                     </ul>
 
                 <?php endforeach ?>
