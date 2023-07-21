@@ -18,9 +18,14 @@ class Actor
     }
 
     // Class Methods
-    public function getAge($year_of_birth)
+    public function getName()
     {
-        return (2023 - $year_of_birth);
+        return $this->name . ' ' . $this->lastname;
+    }
+
+    public function getAge()
+    {
+        return (2023 - $this->year_of_birth);
     }
 }
 
@@ -31,14 +36,16 @@ class Movie
     public $name;
     public $genre;
     public $vote;
+    public $actor;
     public $id;
 
     // Class Constructor
-    function __construct($name, $genre, $vote, $id)
+    function __construct($name, $genre, $vote, $actor, $id)
     {
         $this->name = $name;
         $this->genre = $genre;
         $this->vote = $vote;
+        $this->actor = $actor;
         $this->id = $id;
     }
 
@@ -49,9 +56,15 @@ class Movie
     }
 }
 
+// Create Actors
+$JhonDavid = new Actor("John David", "Washington", 1984);
+$KeanuReeves = new Actor("Keanu", "Reeves", 1964);
+
+
 // Create Movie Instances
-$Tenet = new Movie("Tenet", "Action", "7", 234);
-$Matrix = new Movie("Matrix", "SciFi", "6.5", 354345);
+$Tenet = new Movie("Tenet", "Action", "7", $JhonDavid, 234);
+$Matrix = new Movie("Matrix", "SciFi", "6.5", $KeanuReeves, 354345);
+
 
 // Create Movies array
 $movies = [
@@ -101,6 +114,10 @@ $movies = [
                         <li class="list-group-item list-group-item-action"> <?= $data->name ?> </li>
                         <li class="list-group-item list-group-item-action"> <?= $data->genre ?> </li>
                         <li class="list-group-item list-group-item-action"> <?= $data->vote ?> </li>
+                        <ul>
+                            <li class="list-group-item list-group-item-action"><?= $data->actor->getName() ?></li>
+                            <li class="list-group-item list-group-item-action"><?= $data->actor->getAge() ?></li>
+                        </ul>
                     </ul>
 
                 <?php endforeach ?>
