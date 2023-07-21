@@ -1,4 +1,19 @@
-<?php ?>
+<?php
+
+// Create class Movie
+
+class Movie
+{
+    // Class properties
+    public $name;
+    public $genre;
+    public $vote;
+    public $id;
+}
+
+?>
+
+
 
 <!-- HTML -->
 <!DOCTYPE html>
