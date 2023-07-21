@@ -1,6 +1,29 @@
 <?php
 
 
+// Create class Actor
+class Actor
+{
+    // Class properties
+    public $name;
+    public $lastname;
+    public $year_of_birth;
+
+    // Class Constructor
+    function __construct($name, $lastname, $year_of_birth)
+    {
+        $this->name = $name;
+        $this->lastname = $lastname;
+        $this->year_of_birth = $year_of_birth;
+    }
+
+    // Class Methods
+    public function getAge($year_of_birth)
+    {
+        return (2023 - $year_of_birth);
+    }
+}
+
 // Create class Movie
 class Movie
 {
