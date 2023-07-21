@@ -30,7 +30,11 @@ class Movie
 $Tenet = new Movie("Tenet", "Action", "7", 234);
 $Matrix = new Movie("Matrix", "SciFi", "6.5", 354345);
 
-var_dump($Tenet, $Matrix);
+// Create Movies array
+$movies = [
+    $Tenet,
+    $Matrix
+];
 
 ?>
 
@@ -65,8 +69,18 @@ var_dump($Tenet, $Matrix);
 
             <h1>PHP Movie</h1>
             <div class="pt-3">
-                <ul>
-                </ul>
+                <?php foreach ($movies as $data) : ?>
+
+                    <h3><?= $data->name ?></h3>
+                    <ul>
+                        <li> <?= $data->name ?> </li>
+                        <li> <?= $data->genre ?> </li>
+                        <li> <?= $data->vote ?> </li>
+                    </ul>
+
+                <?php endforeach ?>
+
+
             </div>
         </div>
     </div>
