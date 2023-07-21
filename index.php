@@ -30,6 +30,8 @@ class Movie
 $Tenet = new Movie("Tenet", "Action", "7", 234);
 $Matrix = new Movie("Matrix", "SciFi", "6.5", 354345);
 
+var_dump($Tenet, $Matrix);
+
 ?>
 
 
@@ -63,6 +65,8 @@ $Matrix = new Movie("Matrix", "SciFi", "6.5", 354345);
 
             <h1>PHP Movie</h1>
             <div class="pt-3">
+                <ul>
+                </ul>
             </div>
         </div>
     </div>
