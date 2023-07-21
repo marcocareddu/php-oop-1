@@ -26,6 +26,10 @@ class Movie
     }
 }
 
+// Create Movie Instances
+$Tenet = new Movie("Tenet", "Action", "7", 234);
+$Matrix = new Movie("Matrix", "SciFi", "6.5", 354345);
+
 ?>
 
 
