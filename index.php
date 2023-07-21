@@ -18,6 +18,12 @@ class Movie
         $this->vote = $vote;
         $this->id = $id;
     }
+
+    // Class methods
+    public function getId()
+    {
+        return $this->id;
+    }
 }
 
 ?>
